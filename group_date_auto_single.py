@@ -4,7 +4,7 @@ import sys
 from playwright.sync_api import Playwright, sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 # enter what experation date to set each group too
-new_exp_date = "6/24/2031"
+new_exp_date = ""
 
 # enter badgr email and password
 login_email = ""
