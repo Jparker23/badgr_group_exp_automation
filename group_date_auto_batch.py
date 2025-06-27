@@ -3,7 +3,7 @@ import csv
 import asyncio
 from playwright.async_api import async_playwright, TimeoutError as PlaywrightTimeoutError
 
-new_exp_date = "6/24/2031"
+new_exp_date = ""
 
 # enter badgr email and password
 login_email = ""
