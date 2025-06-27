@@ -34,7 +34,7 @@ Web scrapes the Badgr interface to extract group management links.
 High-performance batch processing script for updating group expiration dates.
 
 **Features:**
-- Concurrent processing (up to 20 simultaneous operations)
+- Concurrent processing (configurable number of simultaneous operations)
 - Asynchronous execution for faster processing
 - Built-in verification of updates
 - Progress tracking and error handling
