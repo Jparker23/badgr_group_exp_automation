@@ -11,7 +11,7 @@ csv_name = "group_links.csv"
 
 with sync_playwright() as playwright:
     # open new browser in headless mode, then open new context and page
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     page = context.new_page()
     
