@@ -75,12 +75,16 @@ with sync_playwright() as playwright:
         
         # exit if a page takes more than 10 seconds to load link
         except PlaywrightTimeoutError:
-            print(f"Timeout: Page did not load within 10 seconds for link: {i}: {link}")
-            sys.exit(1)
+            error_msg = f"Timeout on link {i}: {link}"
+            print(f"{error_msg}")
+            errors.append(error_msg)
+            continue
         # exit if a link has different error
         except Exception as e:
-            print(f"Error on link: {i}: {link} - {e}")
-            sys.exit(1)
+            error_msg = f"Error on link {i}: {link} - {e}"
+            print(f"{error_msg}")
+            errors.append(error_msg)
+            continue
         
     # clean up by closing browser and context
     context.close()
