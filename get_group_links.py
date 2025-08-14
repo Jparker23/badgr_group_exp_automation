@@ -30,7 +30,7 @@ with sync_playwright() as playwright:
     page.get_by_role("tab", name="Groups").click()
     
     # wait for groups page to load
-    page.wait_for_load_state("networkidle") 
+    page.wait_for_timeout(60000) 
     # set results per page to 100 for faster execution
     page.get_by_label("Results Per Page").select_option("100")
     
